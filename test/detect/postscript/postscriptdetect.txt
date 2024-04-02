@@ -1,0 +1,36 @@
+%!
+
+% This is a comment
+/MyProcedure {
+    42 2 mul
+    pop
+    (Hello World) print
+} bind def
+
+/JustAName MyProcedure
+
+% Some more data types
+<DE AD BE EF> 16#F33DBEEF -42e-3
+
+% Some number and string juggling
+/res (\\000\\000\\000\\000\\000\\000\\000\\000) def
+/i 0 def
+{
+    % 10 - i * 2
+    /s (16#) arg 10 i 2 mul sub 2 getinterval cat cvi 8 3 string cvrs def
+
+    % pad out first
+    res i 4 mul 92 put % backslash
+    res i 4 mul 1 add 48 put
+    res i 4 mul 2 add 48 put
+    res i 4 mul 3 add 48 put
+
+    % put number at index (24 - i * 4)
+    res i 1 add 4 mul s length sub s putinterval
+
+    /i i 1 add def
+    i 5 gt
+    {
+        exit % stop after 5
+    } if
+} loop

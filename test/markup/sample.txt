@@ -1,0 +1,11 @@
+% This is a comment
+/MyProcedure {
+    42 2 mul
+    pop
+    (Hello World) print
+} bind def
+
+/JustAName MyProcedure
+
+% Some more data types
+<DE AD BE EF> 16#F33DBEEF -42e-3

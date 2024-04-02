@@ -1,0 +1,11 @@
+<span class="hljs-comment">% This is a comment</span>
+<span class="hljs-variable">/MyProcedure</span> {
+    <span class="hljs-number">42</span> <span class="hljs-number">2</span> <span class="hljs-keyword">mul</span>
+    <span class="hljs-keyword">pop</span>
+    <span class="hljs-string">(Hello World)</span> <span class="hljs-keyword">print</span>
+} <span class="hljs-keyword">bind</span> <span class="hljs-keyword">def</span>
+
+<span class="hljs-variable">/JustAName</span> MyProcedure
+
+<span class="hljs-comment">% Some more data types</span>
+<span class="hljs-string">&lt;DE AD BE EF&gt;</span> <span class="hljs-number">16#F33DBEEF</span> <span class="hljs-number">-42e-3</span>
